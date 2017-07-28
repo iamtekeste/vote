@@ -8,7 +8,7 @@ export default function Talk(props) {
   }
   const buttonText = props.voted ? 'You voted!' : 'Vote';
   return (
-    <div className="talk-card">
+    <div className="card talk-card">
       <h3>{props.talk.title}</h3>
       <p>{props.talk.description}</p>
       <a href={props.talk.slideLink}>Slide</a>

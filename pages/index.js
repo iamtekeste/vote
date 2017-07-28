@@ -4,7 +4,9 @@ import Talk from './components/Talk';
 import Layout from './components/Layout';
 
 class Index extends Component {
-	state = {};
+	state = {
+		voted: true,
+	};
 	componentDidMount = () => {
 		this.setState({
 			voted: localStorage.getItem('voted') || false ,

@@ -10,6 +10,9 @@ body {
     box-shadow: 0 1px 8px rgba(0,0,0,.3);
     padding: 15px 15px;
 }
+h1,h2,h3 {
+  line-height: 1.4;
+}
 a {
   text-decoration: none;
   color: #333;
@@ -41,16 +44,18 @@ a.logo {
 .talks {
   margin-top: 50px;
 }
-.talk-card {
+.card {
   background: #fff;
   padding: 20px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.3);
+  vertical-align: top;
+  display: inline-block;
+}
+.talk-card {
   padding-bottom: 80px;
   margin-right: 30px;
   width: 31.3333%;
-  display: inline-block;
   position: relative;
-  box-shadow: 0 1px 8px rgba(0,0,0,.3);
-  vertical-align: top;
 }
 .talk-card h3 {
     margin-top: 0;
@@ -91,6 +96,23 @@ a.logo {
   margin-right:0;
 }
 
+.winner-card {
+  margin-top: 50px;
+  width: 80%;
+  padding-top: 0;
+}
+.winner-card h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  border-bottom: 10px solid;
+  display: inline-block;
+  font-size: 48px;
+  margin-bottom: 0;
+}
+.winner-card h3 {
+  color: #5c00ff;
+}
+
 @media all and (max-width: 1199px) {
   .talk-card {
     width: 47%;
@@ -121,5 +143,16 @@ a.logo {
   }
   .talk-card h3 {
     font-size: 16px;
+  }
+
+  .winner-card {
+    width: 100%;
+  }
+  .winner-card h1 {
+    font-size: 24px;
+    border-bottom: solid 5px;
+  }
+  .winner-card h2 {
+    font-size: 18px;
   }
 }

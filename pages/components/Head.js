@@ -9,7 +9,6 @@ export default (props) => {
       <link rel="stylesheet" href="../../static/style.css" />
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet" />
       <style>{`
-
       `}
       </style>
     </Head>
