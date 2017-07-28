@@ -18,6 +18,8 @@
     "express": "^4.15.3",
     "mongoose": "^4.11.4",
     "next": "^3.0.1-beta.18",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }

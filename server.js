@@ -3,7 +3,8 @@ const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+var passport = require('passport')
+  , LocalStrategy = require('passport-local').Strategy;
 //connect to DB
 mongoose.connect(process.env.DATABASE, {useMongoClient: true});
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
@@ -31,8 +32,30 @@ const voteSchema = new mongoose.Schema({
   userToken: String,
   vote: Number,
 });
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String
+});
+
 const Talk = mongoose.model('Talk', talkSchema);
 const Vote = mongoose.model('Vote', voteSchema);
+const User = mongoose.model('User', userSchema);
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
+
 app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.json());
@@ -125,6 +148,9 @@ app.prepare().then(() => {
     });
   });
 
+  server('/api/login', (req, res) => {
+
+  });
   server.get('*', (req, res) => {
     return handle(req, res)
   });
