@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Talk from './components/Talk';
+import Layout from './components/Layout';
 
 class Index extends Component {
 	state = {};
@@ -32,11 +33,15 @@ class Index extends Component {
 			return <Talk key={talk._id} talk={talk} castVote={this.castVote} voted={this.state.voted} />
 		});
     return (
-			<div>
-				<h1>Vote for your favorite talk.</h1>
-				<h2>you can only vote once. Make it count.</h2>
-				{talks}
-			</div>
+			<Layout title="Welcome to HackNight">
+				<div className="tagline">
+					<h1>Vote for your favorite talk.</h1>
+					<h2>you can only vote once. Make it count.</h2>
+				</div>
+				<div className="talks">
+					{talks}
+				</div>
+			</Layout>
     );
   };
 }

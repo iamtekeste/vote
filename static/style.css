@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #F2C94C;
+  font-family: 'Poppins', sans-serif;
+}
+.nav {
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    padding: 15px 15px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a.logo {
+  font-size: 24px;
+}
+.menu {
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+}
+.content {
+  padding: 0px 15px;
+  text-align: center;
+}
+.tagline {
+  text-align: center;
+}
+.tagline h1, .tagline h2 {
+  margin:0;
+  font-size: 24px;
+}
+.tagline h1 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+.talks {
+  margin-top: 50px;
+}
+.talk-card {
+  background: #fff;
+  padding: 20px;
+  padding-bottom: 80px;
+  margin-right: 30px;
+  width: 31.3333%;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 1px 8px rgba(0,0,0,.3);
+  vertical-align: top;
+}
+.talk-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+.talk-card a {
+  text-decoration: underline;
+  display: inline-block;
+  padding-right: 20px;
+  color: #2196F3;
+}
+.talk-card p {
+  line-height: 1.4;
+}
+.talk-card button {
+  display: block;
+  position: absolute;
+  background: #333;
+  border: none;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-family: Poppins;
+  line-height: 1.4;
+}
+.talk-card button:hover {
+  background: #000;
+}
+.talk-card button:disabled {
+  background: #ddd;
+  color: #333;
+}
+.talks .talk-card:last-child {
+  margin-right:0;
+}
+
+@media all and (max-width: 1199px) {
+  .talk-card {
+    width: 47%;
+    margin-bottom: 30px;
+  }
+  .talks .talk-card:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .nav {
+    padding: 10px 10px;
+  }
+  .talks {
+    margin-top: 25px;
+  }
+  .talk-card {
+    width: 100%;
+  }
+  .talks .talk-card {
+    margin-right: 0;
+  }
+  .tagline h1 {
+    font-size: 24px;
+  }
+  .tagline h2 {
+    font-size: 18px;
+  }
+  .talk-card h3 {
+    font-size: 16px;
+  }
+}
