@@ -11,6 +11,7 @@ export default class Form extends Component {
       authorProfile: '',
     },
     isSaved: false,
+    errors: {}
   };
   handleChange = (event) => {
     const value = event.target.value;
@@ -33,19 +34,28 @@ export default class Form extends Component {
                 authorName: '',
                 authorProfile: '',
               },
-              isSaved: true
+              isSaved: true,
+              errors: {}
             });
           })
           .catch(err => {
-            console.log(`oops ${err.message}`);
+            this.setState({
+              isSaved: false,
+              errors: err.response.data.errors
+            });
           });
   };
   render = () => {
+    const errors = Object.keys(this.state.errors).map(field => {
+      return <p key={field} className="error">{field} is required.</p>;
+    });
+    console.log(errors);
     return (
       <div className="add-talk">
         <h1>Add a talk.</h1>
+        {errors}
         {this.state.isSaved ?
-        <p>Successfully saved the talk. </p> : ''}
+        <p className="success">Successfully saved the talk. </p> : ''}
         <form>
           <input name="title" placeholder="Talk title" type="text" value={this.state.data.title} onChange={this.handleChange} />
           <textarea name="description" placeholder="Talk description" value={this.state.data.description} onChange={this.handleChange} />

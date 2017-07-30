@@ -147,6 +147,12 @@ a.logo {
   cursor: pointer;
   margin-bottom: 10px;
 }
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
 @media all and (max-width: 1199px) {
   .talk-card {
     width: 47%;
