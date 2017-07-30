@@ -1,6 +1,7 @@
 import Form from './components/Form';
+import Layout from './components/Layout';
 export default () => (
-  <div>
+  <Layout title="Add talk">
     <Form />
-  </div>
-)
+  </Layout>
+);

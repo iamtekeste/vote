@@ -148,7 +148,7 @@ app.prepare().then(() => {
     });
   });
 
-  server('/api/login', (req, res) => {
+  server.post('/api/login', (req, res) => {
 
   });
   server.get('*', (req, res) => {

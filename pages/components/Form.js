@@ -42,7 +42,7 @@ export default class Form extends Component {
   };
   render = () => {
     return (
-      <div>
+      <div className="add-talk">
         <h1>Add a talk.</h1>
         {this.state.isSaved ?
         <p>Successfully saved the talk. </p> : ''}
