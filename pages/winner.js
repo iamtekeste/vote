@@ -16,7 +16,7 @@ const Result = (props) => {
 };
 
 Result.getInitialProps = async () => {
-  const resp =  await axios.get('http://localhost:3000/api/winner');
+  const resp =  await axios.get('http://localhost:3001/api/winner');
   const winner = resp.data;
 
   return {

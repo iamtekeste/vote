@@ -49,7 +49,7 @@ class Index extends Component {
 }
 
 Index.getInitialProps = async () => {
-	const resp = await axios.get('http://localhost:3000/api/talks');
+	const resp = await axios.get('http://localhost:3001/api/talks');
 	const talks = resp.data;
 	return {
 		talks,
