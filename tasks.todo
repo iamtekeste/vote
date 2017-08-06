@@ -7,3 +7,7 @@
     ☐ validation
     ☐ one vote per person
 ☐ style it`
+☐ Deploy:
+ ☐ create the database
+ ☐ update ngnix
+ ☐ point tekeste.me to DO
