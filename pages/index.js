@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 
 class Index extends Component {
 	state = {
-		voted: true,
+		voted: false,
 	};
 	componentDidMount = () => {
 		this.setState({
