@@ -123,6 +123,9 @@ app.prepare().then(() => {
         res.status(500);
         res.json(err);
       })
+    }).catch(err => {
+      res.status(500);
+      res.json(err);
     });
   });
   server.post('/api/vote', (req, res) => {
