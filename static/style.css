@@ -56,7 +56,8 @@ a.logo {
 }
 .talk-card {
   padding-bottom: 80px;
-  margin-right: 30px;
+      min-height: 248px;
+    margin-left: 15px;
   width: 31.3333%;
   position: relative;
   margin-bottom: 30px;
@@ -171,7 +172,7 @@ a.logo {
     margin-top: 25px;
   }
   .talk-card {
-    width: 100%;
+    width: 90%;
   }
   .talks .talk-card {
     margin-right: 0;
